@@ -10,7 +10,7 @@ export const SimpleSwitch = (props: Props) => {
     };
 
     return (
-        <div className='simpleSwitch'>
+        <div className='simpleSwitch' data-testid="SimpleButton">
             { props.leftLabel ? (
                 <div className='simpleSwitch__label simpleSwitch__leftLabel'>
                     {props.leftLabel}

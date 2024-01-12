@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Screen from '../Screen';
+import Screen from '../../containers/Screen';
 
 export const HomePage = () => {
     return (

@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { DarkThemeContext } from '../../context/darkThemeContext';
+import SimpleButton from '../../components/common/SimpleButton';
 
 import './Header.scss';
 
@@ -11,6 +12,8 @@ export const Header = () => {
             <p>
                 test
             </p>
+            <SimpleButton
+                onClick={() => {console.log("click");}} label="Search" />
         </div>
     );
 };

@@ -4,6 +4,7 @@ exports[`SimpleSwitch Component renders correctly 1`] = `
 <DocumentFragment>
   <div
     class="simpleSwitch"
+    data-testid="SimpleButton"
   >
     <span
       class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"

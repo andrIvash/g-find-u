@@ -1,0 +1,11 @@
+@import '../../../styles/abstracts/functions';
+
+$button-min-width: rem(140);
+$button-radius: rem(2);
+
+.simpleButton {
+    button {
+        min-width: $button-min-width;
+        border-radius: $button-radius;
+    }
+}

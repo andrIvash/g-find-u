@@ -19,6 +19,7 @@ exports[`App Component matches snapshot 1`] = `
       </div>
       <div
         class="simpleSwitch"
+        data-testid="SimpleButton"
       >
         <div
           class="simpleSwitch__label simpleSwitch__leftLabel"
@@ -72,6 +73,21 @@ exports[`App Component matches snapshot 1`] = `
       <p>
         test
       </p>
+      <div
+        class="simpleButton"
+        data-testid="SimpleButton"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          Search
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
     </div>
     <div
       class="screen__content"
