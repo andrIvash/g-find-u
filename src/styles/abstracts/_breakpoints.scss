@@ -1,0 +1,108 @@
+// ===== FOLLOWING ORDER: ===== //
+
+// smartphone
+// smartphone portrait 
+// smartphone landscape 
+// tablet
+// tablet portrait 
+// tablet landscape 
+// desktop 
+
+// ===== fix breakpoints ===== //
+
+$break__smart-portrait-max: 500px;
+
+$break__smart-landscape: 501px;
+$break__smart-landscape-max: 767px;
+
+$break__tablet-portrait: 768px;
+$break__tablet-portrait-max: 1023px;
+
+$break__tablet-landscape: 1024px;
+$break__tablet-landscape-max: 1279px;
+
+$break__desktop: 1280px;
+
+
+// ========================= //
+// ====== "smartphone" ===== //
+// ========================= //
+
+@mixin break-smart--only {
+  @media only screen and (max-width: $break__smart-landscape-max) { @content; }
+}
+
+@mixin break-smart--portrait--only {
+  @media only screen and (max-width: $break__smart-portrait-max) { @content; } // bullshit?
+}
+
+@mixin break-smart--landscape {
+  @media only screen and (min-width: $break__smart-landscape) { @content; }
+}
+
+@mixin break-smart--landscape--only {
+  @media only screen and (min-width: $break__smart-landscape) and (max-width: $break__smart-landscape-max){ @content; }
+}
+
+// ====================== //
+// ====== "tablet"  ===== //
+// ====================== //
+
+@mixin break-tablet--only {
+  @media only screen and (min-width: $break__tablet-portrait) and (max-width: $break__tablet-landscape-max) { @content; }
+}
+
+@mixin break-tablet--portrait {
+  @media only screen and (min-width: $break__tablet-portrait) { @content; }
+}
+
+@mixin break-tablet--landscape {
+  @media only screen and (min-width: $break__tablet-landscape) { @content; }
+}
+
+
+// ================================ //
+// ===== smartphone to tablet ===== //
+// ================================ //
+
+@mixin break-smart2tablet {
+  @media only screen and (max-width: $break__tablet-landscape-max) { @content; }
+}
+
+// =================== //
+// ===== desktop ===== //
+// =================== //
+
+@mixin break-desktop {
+  @media only screen and (min-width: $break__desktop) { @content; }
+}
+
+// ================ //
+// ===== free ===== //
+// ================ //
+
+@mixin break-free($break__free) {
+  @media only screen and (min-width: $break__free) { @content; }
+}
+
+// ================================== //
+// ===== mixins for dynamic use ===== //
+// ================================== //
+
+@mixin break-min($size) {
+    @media only screen and (min-width: $size) { @content; }
+}
+
+@mixin break-max($size) {
+    @media only screen and (max-width: $size) { @content; }
+}
+
+@mixin break-min-max ($size-min, $size-max) {
+    @media only screen and (min-width: $size-min) and (max-width: $size-max) { @content; }
+}
+
+// height
+
+@mixin break-height-min($size) {
+    @media only screen and (min-height: $size) { @content; }
+}
