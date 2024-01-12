@@ -95,6 +95,11 @@ button {
     }
 }
 
+.icon {
+  width: rem(20);
+  height: rem(20);
+}
+
 .rotate {
     animation: rotate 4.5s linear infinite;
 }

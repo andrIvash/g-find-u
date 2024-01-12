@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SimpleSwitch Component renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="simpleSwitch"
+  >
+    <span
+      class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+    >
+      <span
+        class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorDefault PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorDefault css-1i8lvs-MuiButtonBase-root-MuiSwitch-switchBase"
+      >
+        <input
+          aria-label="controlled"
+          class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+          type="checkbox"
+        />
+        <span
+          class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+        />
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </span>
+      <span
+        class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+      />
+    </span>
+  </div>
+</DocumentFragment>
+`;

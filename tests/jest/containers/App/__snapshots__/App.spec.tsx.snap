@@ -1,78 +1,99 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Hello component should render component properly 1`] = `
-<div
-  id="main"
->
+exports[`App Component matches snapshot 1`] = `
+<DocumentFragment>
   <div
-    className="header"
+    class="screen "
   >
     <div
-      className="main-heading"
-    >
-      <h1
-        className="themed"
-      >
-        React Webpack Typescript
-      </h1>
-    </div>
-    <div
-      className="main-teaser"
-    >
-      <div>
-        Robust boilerplate for Desktop Applications with ReactJS. Hot Reloading is used in this project for fast development experience.
-      </div>
-    </div>
-    <div
-      className="versions"
+      class="screen__controls center "
     >
       <div
-        className="item"
+        class="item"
       >
-        <div>
-          <img
-            className="item-icon"
-            src=""
-          />
-           Typescript
-        </div>
+        <img
+          class="icon rotate"
+          src=""
+        />
+         React
       </div>
       <div
-        className="item"
+        class="simpleSwitch"
       >
-        <div>
+        <div
+          class="simpleSwitch__label simpleSwitch__leftLabel"
+        >
           <img
-            className="item-icon"
+            class="icon"
             src=""
           />
-           React
         </div>
-      </div>
-      <div
-        className="item"
-      >
-        <div>
+        <span
+          class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+        >
+          <span
+            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorDefault PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorDefault css-1i8lvs-MuiButtonBase-root-MuiSwitch-switchBase"
+          >
+            <input
+              aria-label="controlled"
+              class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+              type="checkbox"
+            />
+            <span
+              class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+            />
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </span>
+          <span
+            class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+          />
+        </span>
+        <div
+          class="simpleSwitch__label simpleSwitch__rightLabel"
+        >
           <img
-            className="item-icon"
+            class="icon"
             src=""
           />
-           Webpack
         </div>
       </div>
-    </div>
-  </div>
-  <div
-    className="footer"
-  >
-    <div
-      className="center"
-    >
-      <button
-        onClick={[Function]}
-      >
-        Light Theme
+      <button>
+        Dark Theme
       </button>
     </div>
+    <div
+      class="header "
+    >
+      <h2>
+        Header
+      </h2>
+      <p>
+        test
+      </p>
+    </div>
+    <div
+      class="screen__content"
+    >
+      <div
+        data-testid="HomePage"
+      >
+        <h2>
+          Home
+        </h2>
+      </div>
+    </div>
+    <div
+      class="footer"
+    >
+      <h2>
+        Footer
+      </h2>
+      <p>
+        test
+      </p>
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;

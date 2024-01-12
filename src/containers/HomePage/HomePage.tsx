@@ -5,7 +5,7 @@ import Screen from '../Screen';
 export const HomePage = () => {
     return (
         <Screen>
-            <div>
+            <div data-testid="HomePage">
                 <h2>Home</h2>
                 
             </div>

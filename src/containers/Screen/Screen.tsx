@@ -3,6 +3,7 @@ import { DarkThemeContext } from '../../context/darkThemeContext';
 import { Props } from './';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import SimpleSwitch from '../../components/common/SimpleSwitch';
 import { useLocalStorage } from '../../hooks/useLocalStorage';
 import { icons } from '../../components/common/Icons';
 
@@ -28,8 +29,14 @@ export const Screen = ({children}: Props) => {
             <div className={`screen ${darkTheme ? "screen--dark" : ""}`}>
                 <div className='screen__controls center '>
                     <div className='item'>
-                        <img className='item-icon rotate' src={icons.react} /> React
+                        <img className='icon rotate' src={icons.react} /> React
                     </div>
+                    <SimpleSwitch
+                        checked={darkTheme}
+                        onChange={toggleTheme}
+                        leftLabel={<img className='icon' src={icons.sun} />}
+                        rightLabel={<img className='icon' src={icons.moon} />}
+                    />
                     <button onClick={toggleTheme}>
                         {darkTheme ? 'Light Theme' : 'Dark Theme'}
                     </button>
