@@ -71,6 +71,10 @@ h2 {
     background: var(--app-ctcolor);
 }
 
+.input, .input > input {
+    font-size: var(--input-font-size);
+}
+
 .button, .button > button {
     font-size: var(--button-font-size);
 }
@@ -169,6 +173,10 @@ h2 {
         .button, .button > button {
             font-size: var(--button-font-size-medium);
         }
+
+        .input, .input > input {
+            font-size: var(--input-font-size-medium);
+        }
     }
 
     @include break-min-max(rem(320), rem(500)) {
@@ -190,6 +198,10 @@ h2 {
 
         .button, .button > button {
             font-size: var(--button-font-size-small);
+        }
+
+        .input, .input > input {
+            font-size: var(--input-font-size-small);
         }
     }
 }

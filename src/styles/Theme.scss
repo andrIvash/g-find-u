@@ -29,7 +29,7 @@
     --app-accent-color: #32639f;    
     --app-bgcolor: #202020;
     --app-ctcolor: #373232;
-    --app-border-color: #3b3f44;
+    --app-border-color: #b3bcc8;
 
     // Scrollbar
     --scroll-width: 10px;
@@ -41,9 +41,15 @@
     --button-font-size: 16px;
     --button-font-size-medium: 14px
     --button-font-size-small: 12px
-    // // Selection
-    // --selection-bgcolor: var(--app-accent-color);
-    // --selection-color: #fff;
+
+    // Input
+    --input-font-size: 16px;
+    --input-font-size-medium: 14px;
+    --input-font-size-small: 12px;
+
+    // Selection
+    --selection-bgcolor: var(--app-accent-color);
+    --selection-color: #fff;
 
     // // Button
     // --button-color: #fff;
@@ -89,6 +95,7 @@ body:not(.dark-mode) {
     --app-accent-color: #2f77ca;
     --app-bgcolor: #f1f0f0;
     --app-ctcolor: #ffffff;
+    --app-border-color: #3b3f44;
 
     // Selection
     --selection-bgcolor: var(--app-accent-color);

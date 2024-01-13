@@ -7,9 +7,9 @@ describe('SimpleButton Component', () => {
     const mockOnClick = jest.fn();
   
     it('renders correctly with provided label', () => {
-      const label = 'Click Me';
-      render(<SimpleButton label={label} onClick={mockOnClick} />);
-      expect(screen.getByText(label)).toBeInTheDocument();
+        const label = 'Click Me';
+        render(<SimpleButton label={label} onClick={mockOnClick} />);
+        expect(screen.getByText(label)).toBeInTheDocument();
     });
 
     it('renders correctly with default label', () => {
@@ -19,15 +19,15 @@ describe('SimpleButton Component', () => {
       });
   
     it('calls onClick prop when clicked', () => {
-      const label = 'Click Me';
-      render(<SimpleButton label={label} onClick={mockOnClick} />);
-      fireEvent.click(screen.getByText(label));
-      expect(mockOnClick).toHaveBeenCalledTimes(1);
+        const label = 'Click Me';
+        render(<SimpleButton label={label} onClick={mockOnClick} />);
+        fireEvent.click(screen.getByText(label));
+        expect(mockOnClick).toHaveBeenCalledTimes(1);
     });
   
     it('matches snapshot', () => {
-      const label = 'Click Me';
-      const { asFragment } = render(<SimpleButton label={label} onClick={mockOnClick} />);
-      expect(asFragment()).toMatchSnapshot();
+        const label = 'Click Me';
+        const { asFragment } = render(<SimpleButton label={label} onClick={mockOnClick} />);
+        expect(asFragment()).toMatchSnapshot();
     });
   });

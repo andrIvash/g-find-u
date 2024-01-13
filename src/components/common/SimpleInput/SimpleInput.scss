@@ -1,0 +1,9 @@
+@import '../../../styles/abstracts/functions';
+
+$input-min-width: rem(140);
+
+.simpleInput {
+    input {
+        min-width: $input-min-width;
+    }
+}
