@@ -140,6 +140,90 @@ exports[`App Component matches snapshot 1`] = `
           <p>
             Showing users for testttt
           </p>
+          <section
+            class="repoCard"
+          >
+            <header
+              class="repoCard__header"
+            >
+              <div
+                class="repoCard__headerLeft"
+              >
+                <h3
+                  class="repoCard__title"
+                >
+                  <a
+                    class="repoCard__link"
+                    href="https://github.com/andrIvas/excercises"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    excercises
+                  </a>
+                </h3>
+                <div
+                  class="repoCard__fork"
+                >
+                  it's Fork
+                </div>
+              </div>
+              <div
+                class="repoCard__headerRight"
+              >
+                <a
+                  class="visually-hidden"
+                  href="https://api.github.com/repos/andrIvas/excercises/stargazers"
+                >
+                  <span
+                    class="repoCard__stars"
+                  >
+                    1
+                  </span>
+                  <svg
+                    aria-label="star"
+                    class="octicon octicon-star"
+                    height="16"
+                    role="img"
+                    version="1.1"
+                    viewBox="0 0 14 16"
+                    width="14"
+                  >
+                    <path
+                      d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </header>
+            <main
+              class="repoCard__main"
+            >
+              <p
+                class="repoCard__desq"
+              >
+                Interview tasks, interesting things
+              </p>
+            </main>
+            <footer
+              class="repoCard__footer"
+            >
+              <span
+                class="repoCard__lang-logo"
+                style="background-color: blue;"
+              />
+              <span
+                class="repoCard__lang"
+              >
+                Javascript
+              </span>
+              <span
+                class="repoCard__time"
+              >
+                Updated: 15.10.2018
+              </span>
+            </footer>
+          </section>
         </div>
       </div>
     </div>

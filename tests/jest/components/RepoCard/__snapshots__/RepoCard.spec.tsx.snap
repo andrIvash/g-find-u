@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RepoCard Component matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="repoCard"
+  >
+    <header
+      class="repoCard__header"
+    >
+      <div
+        class="repoCard__headerLeft"
+      >
+        <h3
+          class="repoCard__title"
+        >
+          <a
+            class="repoCard__link"
+            href="https://github.com/test/repo"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Test Repo
+          </a>
+        </h3>
+      </div>
+      <div
+        class="repoCard__headerRight"
+      >
+        <a
+          class="visually-hidden"
+          href="https://api.github.com/repos/andrIvas/excercises/stargazers"
+        >
+          <span
+            class="repoCard__stars"
+          >
+            10
+          </span>
+          <svg
+            aria-label="star"
+            class="octicon octicon-star"
+            height="16"
+            role="img"
+            version="1.1"
+            viewBox="0 0 14 16"
+            width="14"
+          >
+            <path
+              d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+      </div>
+    </header>
+    <main
+      class="repoCard__main"
+    >
+      <p
+        class="repoCard__desq"
+      >
+        Test Description
+      </p>
+    </main>
+    <footer
+      class="repoCard__footer"
+    >
+      <span
+        class="repoCard__lang-logo"
+        style="background-color: rgb(0, 0, 0);"
+      />
+      <span
+        class="repoCard__lang"
+      >
+        JavaScript
+      </span>
+      <span
+        class="repoCard__time"
+      >
+        Updated: 1 day ago
+      </span>
+    </footer>
+  </section>
+</DocumentFragment>
+`;

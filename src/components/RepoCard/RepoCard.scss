@@ -1,0 +1,129 @@
+
+@import '../../styles/abstracts/functions';
+@import '../../styles/abstracts/breakpoints';
+// .repoCards {
+//     list-style: none;
+//     margin: 0;
+//     padding: 0;
+// }
+
+// .repoCards__item {
+//     padding: 20px 10px;
+//     border-bottom: 1px #e1e4e8 solid;
+//     cursor: pointer;
+// }
+  
+// .repoCards__item:focus, .repoCards__item:hover {
+//     box-shadow: -1px -1px 9px 1px rgba(0,0,0,0.08);
+//     outline: none;
+// }
+$star-width: rem(40);
+$margin: rem(20);
+$padding: rem(10);
+$logo-size: rem(10);
+
+.repoCard {
+    .repoCard__header {
+        display: flex;
+        margin-bottom: $margin;
+    }
+
+    .repoCard__title {
+        line-height: 1;
+        margin-bottom: $padding;
+    }
+
+    .repoCard__headerLeft {
+        flex: 1;
+    }
+
+    .repoCard__headerRight {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: $star-width;
+
+        a {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg path {
+            fill: var(--app-color);
+        }
+    }
+
+    .repoCard__stars {
+        margin-right: calc($padding / 2);
+        color: var(--app-color);
+        font-weight: bold;
+    }
+
+    .repoCard__link, .repoCard__link:active, .repoCard__link:hover, .repoCard__link:visited{
+        color: var(--app-color);
+        text-decoration: none;
+        position: relative;
+    }
+
+
+    .repoCard__desq {
+        color: var(--app-color);
+    }
+
+    .repoCard__footer {
+        display: flex;
+        align-items: center;
+        font-size: var(--app-font-comment-size);
+    }
+
+    .repoCard__lang-logo {
+        display: inline-block;
+        width: $logo-size;
+        height: $logo-size;
+        height: $logo-size;
+        border-radius: 50%;
+        margin-right: calc($padding / 2);
+    }
+
+    .repoCard__lang {
+        margin-right: calc($padding / 2);
+        font-weight: bold;
+    }
+}
+
+@media screen {
+    @include break-min-max(rem(425), rem(1100)) {
+        .repoCard {
+            .repoCard__header {
+                margin-bottom: $padding;
+            }
+
+            .repoCard__title {
+                margin-bottom: calc($padding / 2);
+            }
+
+            .repoCard__footer {
+                font-size: var(--app-font-comment-size-medium);
+            }
+        }
+    }
+
+    @include break-min-max(rem(320), rem(500)) {
+        .repoCard {
+            .repoCard__header {
+                margin-bottom: calc($padding / 2);
+            }
+
+            .repoCard__title {
+                margin-bottom: calc($padding / 2);
+            }
+
+            .repoCard__footer {
+                font-size: var(--app-font-comment-size-small);
+            }
+        }
+    }
+}
+

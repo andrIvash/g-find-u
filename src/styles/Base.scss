@@ -48,6 +48,20 @@ h2 {
     margin: 0;
 }
 
+h3 {
+    margin: 0;
+    font-size: var(--app-font-block-size);
+}
+
+a {
+    color: --app-accent-color;
+    text-decoration: none;
+
+    &:hover, &:focus, &:active, &:visited {
+        color: var(--app-accent-color);
+    }
+}
+
 .blockText {
     margin: 0;
     font-size: var(--app-font-block-size);
@@ -166,6 +180,10 @@ h2 {
             font-size: var(--app-font-subtitle-size-medium);
         }
 
+        h3 {
+            font-size: var(--app-font-block-size-medium);
+        }
+
         .blockText {
             font-size: var(--app-font-block-size-medium);
         }
@@ -192,8 +210,12 @@ h2 {
             font-size: var(--app-font-subtitle-size-small);
         }
 
-        .blockText {
+        h3 {
             font-size: var(--app-font-block-size-small);
+        }
+
+        .blockText {
+            font-size: var(--button-font-size-small);
         }
 
         .button, .button > button {

@@ -6,8 +6,8 @@
 
 :root {
     // Application
-    --app-font-size: 16px;
-    --app-font-size-medium: 14px;
+    --app-font-size: 14px;
+    --app-font-size-medium: 12px;
     --app-font-size-small: 10px;
 
     --app-font-title-size: 26px;
@@ -18,15 +18,20 @@
     --app-font-subtitle-size-medium: 20px;
     --app-font-subtitle-size-small: 16px;
 
-    --app-font-block-size: 18px;
-    --app-font-block-size-medium: 16px;
-    --app-font-blocke-size-small: 14px;
+    --app-font-block-size: 20px;
+    --app-font-block-size-medium: 18px;
+    --app-font-block-size-small: 16px;
+
+    --app-font-comment-size: 12px;
+    --app-font-comment-size-medium: 10px;
+    --app-font-comment-size-small: 8px;
     
     --app-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
         Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     
     --app-color: #ffffff;
-    --app-accent-color: #32639f;    
+    --app-accent-color: #32639f;  
+    --app-nonactive-color: #8d8b8b;  
     --app-bgcolor: #202020;
     --app-ctcolor: #373232;
     --app-border-color: #b3bcc8;
@@ -96,6 +101,7 @@ body:not(.dark-mode) {
     --app-bgcolor: #f1f0f0;
     --app-ctcolor: #ffffff;
     --app-border-color: #3b3f44;
+    --app-nonactive-color: #b7b7b7; 
 
     // Selection
     --selection-bgcolor: var(--app-accent-color);

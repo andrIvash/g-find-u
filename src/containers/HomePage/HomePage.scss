@@ -1,6 +1,5 @@
 @import '../../styles/abstracts/breakpoints';
 @import '../../styles/abstracts/functions';
-@import '../../styles/Theme.scss';
 
 $main-width: rem(640);
 $medium-width: rem(350);
@@ -29,13 +28,14 @@ $margin-small: rem(5);
 
     label {
         font-size: var(--input-font-size);
-        color: var(--app-color); 
+        color: var(--app-nonactive-color); 
     }
 
     input {
         width: 100%;
         font-size: var(--input-font-size);
         color: var(--app-color);
+        background: var(--app-bgcolor);
     }
 
     legend {

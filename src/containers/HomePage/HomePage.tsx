@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Screen from '../Screen';
 import SimpleButton from '../../components/common/SimpleButton';
 import SimpleInput from '../../components/common/SimpleInput';
+import RepoCard from '../../components/RepoCard';
 
 import './HomePage.scss';
 
@@ -36,6 +37,16 @@ export const HomePage = () => {
                 </div>
                 <div className='homePage__content'>
                     <p>Showing users for {sample}</p>
+                    <RepoCard
+                        title={'excercises'}
+                        repoLink={'https://github.com/andrIvas/excercises'}
+                        isFork={true}
+                        stars={1}
+                        desc={'Interview tasks, interesting things'}
+                        logoColor={'blue'}
+                        lang={'Javascript'}
+                        time={'15.10.2018'}
+                    />
                 </div>
             </div>
         </Screen>
