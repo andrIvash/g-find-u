@@ -1,19 +1,15 @@
-import React, { useContext } from 'react';
-import { DarkThemeContext } from '../../context/darkThemeContext';
-import SimpleButton from '../../components/common/SimpleButton';
+import React from 'react';
+import { icons } from '../../components/common/Icons';
 
 import './Header.scss';
 
 export const Header = () => {
-    const darkTheme = useContext(DarkThemeContext);
     return (
-        <div className={`header ${darkTheme ? "header--dark" : ""}`}>
-            <h2>Header</h2>
-            <p>
-                test
-            </p>
-            <SimpleButton
-                onClick={() => {console.log("click");}} label="Search" />
+        <div className='header'>
+            <div className='header__logo'>
+                <img className='icon rotate header__logoIcon' src={icons.github} />
+            </div>
+            <h1>GitHub Finder</h1>
         </div>
     );
 };

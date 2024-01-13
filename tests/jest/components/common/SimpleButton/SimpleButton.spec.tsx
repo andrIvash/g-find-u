@@ -13,7 +13,7 @@ describe('SimpleButton Component', () => {
     });
 
     it('renders correctly with default label', () => {
-        const defaultLabel = "Ok";
+        const defaultLabel = 'Ok';
         render(<SimpleButton onClick={mockOnClick} />);
         expect(screen.getByText(defaultLabel)).toBeInTheDocument();
       });

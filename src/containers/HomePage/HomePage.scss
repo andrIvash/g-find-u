@@ -1,0 +1,37 @@
+@import '../../styles/abstracts/breakpoints';
+@import '../../styles/abstracts/functions';
+
+.homePage {
+    width: rem(640);
+    
+    @media screen {
+        @include break-min-max(rem(425), rem(1100)) {
+            width: rem(350);
+        }
+
+        @include break-min-max(rem(320), rem(500)) {
+            width: rem(250);
+        }
+    }
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: rem(20);
+
+    @media screen {
+        @include break-min-max(rem(425), rem(1100)) {
+            margin-bottom: rem(10);
+        }
+
+        @include break-min-max(rem(320), rem(500)) {
+        }
+    }
+}
+
+.homePage__submit button {
+    width: 100%;
+}

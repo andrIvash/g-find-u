@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Switch from '@mui/material/Switch';
-import { Props } from "./index";
+import { Props } from './index';
+
 import './SimpleSwitch.scss';
 
 export const SimpleSwitch = (props: Props) => {
@@ -10,7 +11,10 @@ export const SimpleSwitch = (props: Props) => {
     };
 
     return (
-        <div className='simpleSwitch' data-testid="SimpleSwitch">
+        <div
+            className={`simpleSwitch ${props.className ? props.className : ""}`}
+            data-testid='SimpleSwitch'
+        >
             { props.leftLabel ? (
                 <div className='simpleSwitch__label simpleSwitch__leftLabel'>
                     {props.leftLabel}
@@ -20,7 +24,7 @@ export const SimpleSwitch = (props: Props) => {
                 checked={props.checked}
                 onChange={handleChange}
                 inputProps={{ 'aria-label': 'controlled' }}
-                color="default"
+                color='default'
             />
             { props.rightLabel ? (
                 <div className='simpleSwitch__label simpleSwitch__rightLabel'>

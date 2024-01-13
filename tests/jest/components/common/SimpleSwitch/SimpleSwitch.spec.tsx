@@ -12,7 +12,7 @@ describe('SimpleSwitch Component', () => {
   });
 
   it('displays left and right labels when provided', () => {
-    render(<SimpleSwitch onChange={mockOnChange} leftLabel="Left" rightLabel="Right" checked={false} />);
+    render(<SimpleSwitch onChange={mockOnChange} leftLabel='Left' rightLabel='Right' checked={false} />);
     expect(screen.getByText('Left')).toBeInTheDocument();
     expect(screen.getByText('Right')).toBeInTheDocument();
   });

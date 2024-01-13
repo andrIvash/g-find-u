@@ -3,23 +3,15 @@
 exports[`App Component matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="screen "
+    class="screen"
+    data-testid="Screen"
   >
     <div
-      class="screen__controls center "
+      class="screen__controls"
     >
       <div
-        class="item"
-      >
-        <img
-          class="icon rotate"
-          src=""
-        />
-         React
-      </div>
-      <div
-        class="simpleSwitch"
-        data-testid="SimpleButton"
+        class="simpleSwitch screen__simpleSwitch"
+        data-testid="SimpleSwitch"
       >
         <div
           class="simpleSwitch__label simpleSwitch__leftLabel"
@@ -60,55 +52,61 @@ exports[`App Component matches snapshot 1`] = `
           />
         </div>
       </div>
-      <button>
-        Dark Theme
-      </button>
     </div>
     <div
-      class="header "
+      class="header"
     >
-      <h2>
-        Header
-      </h2>
-      <p>
-        test
-      </p>
       <div
-        class="simpleButton"
-        data-testid="SimpleButton"
+        class="header__logo"
       >
-        <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
-          tabindex="0"
-          type="button"
-        >
-          Search
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
-        </button>
+        <img
+          class="icon rotate header__logoIcon"
+          src=""
+        />
       </div>
+      <h1>
+        GitHub Finder
+      </h1>
     </div>
     <div
       class="screen__content"
     >
       <div
+        class="homePage"
         data-testid="HomePage"
       >
-        <h2>
-          Home
-        </h2>
+        <div
+          class="homePage__search"
+        >
+          <div
+            class="simpleButton button homePage__submit"
+            data-testid="SimpleButton"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
+              tabindex="0"
+              type="button"
+            >
+              Search
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+        <div
+          class="homePage__content"
+        >
+          <p>
+            Showing users for testttt
+          </p>
+        </div>
       </div>
     </div>
     <div
-      class="footer"
+      class="footer center"
     >
-      <h2>
-        Footer
-      </h2>
-      <p>
-        test
-      </p>
+      © 2024
     </div>
   </div>
 </DocumentFragment>

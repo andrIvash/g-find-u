@@ -26,20 +26,15 @@ export const Screen = ({children}: Props) => {
 
     return (
         <DarkThemeContext.Provider value={darkTheme}>
-            <div className={`screen ${darkTheme ? "screen--dark" : ""}`}>
-                <div className='screen__controls center '>
-                    <div className='item'>
-                        <img className='icon rotate' src={icons.react} /> React
-                    </div>
+            <div className='screen' data-testid='Screen'>
+                <div className='screen__controls'>
                     <SimpleSwitch
+                        className='screen__simpleSwitch'
                         checked={darkTheme}
                         onChange={toggleTheme}
                         leftLabel={<img className='icon' src={icons.sun} />}
                         rightLabel={<img className='icon' src={icons.moon} />}
                     />
-                    <button onClick={toggleTheme}>
-                        {darkTheme ? 'Light Theme' : 'Dark Theme'}
-                    </button>
                 </div>
                 <Header />
                 <div className='screen__content'>

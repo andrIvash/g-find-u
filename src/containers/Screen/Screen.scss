@@ -3,18 +3,19 @@
 
 .screen {
     display: flex;
+    justify-content: flex-end;
     min-height: 100vh;
     flex-direction: column;
-    background-color: goldenrod;
+
     width: rem(1024);
     padding: 0 rem(20);
 
-    @include break-min-max(rem(425), rem(1100)) {
-        width: rem(425);
-        padding: 0 rem(10);
-    }
-
     @media screen {
+        @include break-min-max(rem(425), rem(1100)) {
+            width: rem(425);
+            padding: 0 rem(10);
+        }
+
         @include break-min-max(rem(320), rem(500)) {
             width: rem(320);
             padding: 0 rem(5);
@@ -23,10 +24,14 @@
 }
 
 .screen__content {
+    display: flex;
     flex: 1;
+    flex-direction: column;
+    align-items: center;
 }
 
-.screen--dark {
-    background-color: rgb(227, 206, 152);
+.screen__simpleSwitch {
+    display: flex;
+    justify-content: flex-end;
 }
 

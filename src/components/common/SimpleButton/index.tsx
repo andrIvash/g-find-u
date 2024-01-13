@@ -1,10 +1,11 @@
 import { SimpleButton } from './SimpleButton';
 
-export const defaultLabel = "Ok";
+export const defaultLabel = 'Ok';
 
 export interface Props {
-    label?: string,
     onClick: () => void,
+    label?: string,
+    className?: string
 }
 
 export default SimpleButton;

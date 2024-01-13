@@ -1,10 +1,44 @@
 @import '../../styles/abstracts/functions';
+@import '../../styles/abstracts/breakpoints';
 
 .header {
-    background-color: rgb(97, 218, 64);
+    display: flex;
+    align-items: center;
+    padding: rem(0, 10);
+    margin-bottom: rem(20);
 }
 
+.header__logo {
+    display: flex;
+    align-items: center;
+    margin-right: rem(10);
+}
 
-.header--dark {
-    background-color: rgb(168, 227, 152);
+.header__logoIcon.icon {
+    width: rem(30);
+    height: rem(30);
+}
+
+@media screen {
+    @include break-min-max(rem(425), rem(1100)) {
+        .header__logo {
+            margin-right: rem(10);
+        }
+
+        .header__logoIcon.icon {
+            width: rem(20);
+            height: rem(20);
+        }
+    }
+
+    @include break-min-max(rem(320), rem(500)) {
+        .header__logo {
+            margin-right: rem(5);
+        }
+
+        .header__logoIcon.icon {
+            width: rem(15);
+            height: rem(15);
+        }
+    }
 }
