@@ -49,4 +49,8 @@ export default class GithubService {
             }
         })
     }
+
+    public getGithubInstance() {
+        return this.github
+    }
 }
