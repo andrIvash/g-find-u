@@ -25,12 +25,11 @@ $logo-size: rem(10);
 .repoCard {
     .repoCard__header {
         display: flex;
-        margin-bottom: $margin;
+        margin-bottom: $padding;
     }
 
     .repoCard__title {
         line-height: 1;
-        margin-bottom: $padding;
     }
 
     .repoCard__headerLeft {
