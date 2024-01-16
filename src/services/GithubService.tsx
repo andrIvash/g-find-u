@@ -41,7 +41,7 @@ export default class GithubService {
         })
     }
 
-    public async fetchRepos(login: string, params?: [{ [key: string]: string }]): Promise<IGithubReposResponce> {
+    public async fetchRepos(login: string, params?: { [key: string]: string }): Promise<IGithubReposResponce> {
         return this.github.get(`/users/${login}/repos`, {
             params: {
                 ...this.defaultParams,

@@ -10,7 +10,8 @@ export interface Props {
    desc: string,
    logoColor: string,
    lang: string,
-   time: string
+   time: string,
+   className?: string
 }
 
 export default RepoCard;

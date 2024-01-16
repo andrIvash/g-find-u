@@ -1,0 +1,14 @@
+@import '../../styles/abstracts/functions';
+
+$margin: rem(10);
+
+.iRepoList {
+    .iRepoList__repoCard {
+        background-color: var(--app-bgcard-color);
+        margin: $margin 0 ;
+
+        .repoCard__fork, .repoCard__lang, .repoCard__time {
+            color: var(--app-info-color);
+        }
+    }
+}

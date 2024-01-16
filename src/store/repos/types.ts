@@ -1,6 +1,7 @@
 
 export interface IGithubReposResponce {
-    data: { [key: string]: any }
+    data: { [key: string]: any },
+    headers: any
 }
 
 export interface IRepo {
@@ -14,8 +15,14 @@ export interface IRepo {
     time: string
 }
 
+export interface IReposSlice {
+    data: IRepo[],
+    page: number,
+    hasMore: boolean
+}
+
 export interface ISlice {
-    repos: IRepo[],
+    repos: IReposSlice,
     isFetching: boolean,
     isError: boolean
 }

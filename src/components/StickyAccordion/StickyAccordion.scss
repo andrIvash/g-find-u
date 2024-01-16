@@ -1,0 +1,91 @@
+@import '../../styles/abstracts/functions';
+@import '../../styles/abstracts/breakpoints';
+
+$wrapper_height: rem(400);
+$padding: rem(12);
+
+.s-acco {
+    display: flex;
+    flex-direction: column;
+    height: $wrapper_height;
+    background-color: lightgray;
+
+    &--no-expanded {
+        background-color: transparent;
+    }
+    .s-acco__item {
+        border-top-width: 0;
+        border-left-width: 0;
+        border-bottom: 1px solid var(--app-border-color);
+        background-color: var(--app-bgcolor);
+
+        &:first-child, &:first-child.s-acco__item--expanded {
+            border-top: 1px solid var(--app-border-color);
+        }
+
+        &.s-acco__item--expanded {
+            flex: 1;
+            margin: 0;
+            border: 0;
+            border-bottom-width: 0;
+
+            .s-acco__sum {
+                div {
+                    margin: $padding 0;
+                }
+            }
+
+            .s-acco__details {
+                background-color: var(--app-ctcolor);
+            }
+        }
+
+        .s-acco__details {
+            background-color: var(--app-ctcolor);
+        }
+
+        .s-acco__sum {
+            background-color: var(--app-bgcolor);
+            border-bottom-color: var(--app-border-color);
+            min-height: 0;
+            margin: 0;
+
+            & > div {
+                border-bottom-width: 0;
+            }
+        }
+
+        .s-acco__header {
+            font-size: var(--app-font-block-size);
+            font-family: var(--app-font-family);
+            font-weight: normal;
+            color: var(--app-color);
+        }
+
+        .s-acco__details {
+            padding: 0 0 0 rem(16);
+        }
+    }
+}
+
+@media screen {
+    @include break-min-max(rem(425), rem(1100)) {
+        .s-acco {
+            .s-acco__item {
+                .s-acco__header {
+                    font-size: var(--app-font-block-size-medium);
+                }
+            }
+        }
+    }
+
+    @include break-min-max(rem(320), rem(500)) {
+        .s-acco {
+            .s-acco__item {
+                .s-acco__header {
+                    font-size: var(--app-font-block-size-small);
+                }
+            }
+        }
+    }
+}

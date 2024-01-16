@@ -55,6 +55,10 @@ $margin-small: rem(5);
     width: 100%;
 }
 
+.homePage__searchName {
+    font-weight: bold;
+}
+
 @media screen {
     @include break-min-max(rem(425), rem(1100)) {
         .homePage {

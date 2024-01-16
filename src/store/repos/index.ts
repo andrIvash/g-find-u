@@ -1,10 +1,14 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Thunk } from '../types';
-import { IRepo, ISlice, IGithubReposResponce } from './types';
+import { ISlice, IGithubReposResponce, IReposSlice } from './types';
 import GithubService from '../../services/GithubService';
 
 export const initialState: ISlice = {
-    repos: [],
+    repos: {
+        data: [],
+        page: 1,
+        hasMore: false
+    },
     isFetching: false,
     isError: false,
 }
@@ -16,7 +20,7 @@ const slice = createSlice({
         request(state) {
             state.isFetching = true;
         },
-        success(state, action: PayloadAction<IRepo[]>) {
+        success(state, action: PayloadAction<IReposSlice>) {
             state.isFetching = false;
             state.isError = false;
             state.repos = action.payload;
@@ -39,7 +43,7 @@ export const filterReposData = (data: IGithubReposResponce['data']) => {
             'Other' : item.language;
         let langColor = '#502cdd';
         switch (language) {
-            case 'Javascript':
+            case 'JavaScript':
                 langColor = '#f1e05a';
                 break;
             case 'HTML':
@@ -68,17 +72,32 @@ export const filterReposData = (data: IGithubReposResponce['data']) => {
     })
 }
 
-export const fetchRepos = (login: string): Thunk => {
+export const fetchRepos = (login: string, page = 1): Thunk => {
     const service = GithubService.getInstance();
     return async (dispatch) => {
         dispatch(request());
         try {
-            const { data } = await service.fetchRepos(login);
+            const { data, headers } = await service.fetchRepos(login, { per_page: '5', page: `${page}`});
+            const linkHeader = headers && headers.get('link');
+            let hasMore = false;
+            if (linkHeader) {
+            const links = linkHeader.split(',').map((a) => a.split(';'));
+                for (const link of links) {
+                    if (link[1].includes('rel="next"')) {
+                        hasMore = true;
+                        break;
+                    }
+                }
+            }
             filterReposData(data);
-            dispatch(success(filterReposData(data)))
+            dispatch(success({
+                data: filterReposData(data),
+                page: page,
+                hasMore
+            }));
         } catch (e) {
             console.error(e);
-            dispatch(failure())
+            dispatch(failure());
         }
     }
 }

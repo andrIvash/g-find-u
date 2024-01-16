@@ -1,28 +1,15 @@
 
 @import '../../styles/abstracts/functions';
 @import '../../styles/abstracts/breakpoints';
-// .repoCards {
-//     list-style: none;
-//     margin: 0;
-//     padding: 0;
-// }
 
-// .repoCards__item {
-//     padding: 20px 10px;
-//     border-bottom: 1px #e1e4e8 solid;
-//     cursor: pointer;
-// }
-  
-// .repoCards__item:focus, .repoCards__item:hover {
-//     box-shadow: -1px -1px 9px 1px rgba(0,0,0,0.08);
-//     outline: none;
-// }
-$star-width: rem(40);
+$star-width: rem(80);
 $margin: rem(20);
 $padding: rem(10);
 $logo-size: rem(10);
 
 .repoCard {
+    padding: $padding;
+
     .repoCard__header {
         display: flex;
         margin-bottom: $padding;
@@ -30,6 +17,11 @@ $logo-size: rem(10);
 
     .repoCard__title {
         line-height: 1;
+        .repoCard__linkWrapper {
+            font-size: var(--app-font-block-size);
+            font-family: var(--app-font-family);
+            font-weight: bold;
+        }
     }
 
     .repoCard__headerLeft {
@@ -41,11 +33,12 @@ $logo-size: rem(10);
         justify-content: center;
         align-items: flex-start;
         width: $star-width;
+        margin-top: calc($padding / 2);
 
         a {
             width: 100%;
             display: flex;
-            justify-content: center;
+            justify-content: flex-end;
             align-items: center;
         }
 
@@ -101,6 +94,9 @@ $logo-size: rem(10);
 
             .repoCard__title {
                 margin-bottom: calc($padding / 2);
+                .repoCard__linkWrapper {
+                    font-size: var(--app-font-block-size-medium);
+                }
             }
 
             .repoCard__footer {
@@ -117,6 +113,9 @@ $logo-size: rem(10);
 
             .repoCard__title {
                 margin-bottom: calc($padding / 2);
+                .repoCard__linkWrapper {
+                    font-size: var(--app-font-block-size-small);
+                }
             }
 
             .repoCard__footer {
