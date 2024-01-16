@@ -23,6 +23,10 @@ $padding: rem(12);
             border-top: 1px solid var(--app-border-color);
         }
 
+        .MuiSvgIcon-root {
+            fill: var(--app-color);
+        }
+
         &.s-acco__item--expanded {
             flex: 1;
             margin: 0;

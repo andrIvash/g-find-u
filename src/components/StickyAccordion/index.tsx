@@ -1,4 +1,4 @@
-import { StickyAccordion } from "./StickyAccordion";
+import { StickyAccordion } from './StickyAccordion';
 import { IUser } from '../../store/users/types';
 
 export interface IProps {

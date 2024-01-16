@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchUsers } from '../../store/users';
 import { fetchRepos } from '../../store/repos';
@@ -10,6 +10,7 @@ import SimpleInput from '../../components/common/SimpleInput';
 import StickyAccordion from '../../components/StickyAccordion';
 import InfiniteRepoList from '../../components/InfiniteRepoList';
 import { LOADER_MESSAGE, ERROR_LOADED_MESSAGE } from '../../resources/constants';
+import { sanitize } from '../../utils';
 
 import './HomePage.scss';
 
@@ -26,8 +27,17 @@ export const HomePage = () => {
 
     const handleSearchPress = () => {
         if (value.length) {
-            dispatch(fetchUsers(value));
+            const sanitazed = sanitize(value);
+            if (sanitazed) {
+                dispatch(fetchUsers(sanitazed));
+            }
         }
+    }
+
+    const onKeyDownHandler = (keyCode: number) => {
+        if (keyCode === 13) {
+            handleSearchPress();
+        }    
     }
 
     const onSearchStringChange = (value: string) => {
@@ -46,7 +56,7 @@ export const HomePage = () => {
         dispatch(fetchRepos(name, page));
     };
 
-    const renderReposContent = React.useCallback(
+    const renderReposContent = useCallback(
         (targetId: string) => {
             return (
                 <InfiniteRepoList
@@ -60,9 +70,16 @@ export const HomePage = () => {
         [reposList, repos.page, repos.hasMore, selectedItem]
     );
 
-    useEffect(() => {
-        // url parsing
-    }, [])
+    const searchLabel = useMemo(() => {
+        let result = '...';
+        if (value.length) {
+            const sanitazed = sanitize(value);
+            if (sanitazed) {
+                result = sanitazed;
+            }
+        }
+        return result;
+    }, [value])
 
     useEffect(() => {
         if (repos.data.length) {
@@ -82,6 +99,7 @@ export const HomePage = () => {
                         onChange={onSearchStringChange}
                         value={value}
                         label={'Enter username'}
+                        onKeyDown={onKeyDownHandler}
                     />
                     <SimpleButton
                         className='homePage__submit'
@@ -90,7 +108,7 @@ export const HomePage = () => {
                     />
                 </div>
                 <div className='homePage__content'>
-                    <p>Showing users for <span className='homePage__searchName'>{value ? value : '...'}</span></p>
+                    <p>Showing users for <span className='homePage__searchName'>{searchLabel}</span></p>
                     {isUsersFetching ? LOADER_MESSAGE : undefined}
                     {isUsersError ? ERROR_LOADED_MESSAGE : undefined}
                     {isReposError ? ERROR_LOADED_MESSAGE : undefined}

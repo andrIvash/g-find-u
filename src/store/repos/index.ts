@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Thunk } from '../types';
-import { ISlice, IGithubReposResponce, IReposSlice } from './types';
+import { ISlice, IGithubReposResponse, IReposSlice } from './types';
 import GithubService from '../../services/GithubService';
 
 export const initialState: ISlice = {
@@ -36,7 +36,7 @@ export const { reducer } = slice;
 
 export const { request, success, failure } = slice.actions;
 
-export const filterReposData = (data: IGithubReposResponce['data']) => {
+export const filterReposData = (data: IGithubReposResponse['data']) => {
     if (!data || !data.length) return [];
     return data.map((item: any) => {
         const language = item.language !== 'JavaScript' && item.language !== 'HTML' && item.language !== 'CSS' ?
@@ -89,7 +89,6 @@ export const fetchRepos = (login: string, page = 1): Thunk => {
                     }
                 }
             }
-            filterReposData(data);
             dispatch(success({
                 data: filterReposData(data),
                 page: page,

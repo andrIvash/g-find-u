@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Screen Component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="screen"
+    data-testid="Screen"
+  >
+    <div
+      class="screen__controls"
+    >
+      <div
+        data-testid="mock-simple-switch"
+      >
+        SimpleSwitch
+      </div>
+    </div>
+    <div
+      data-testid="mock-header"
+    >
+      Header
+    </div>
+    <div
+      class="screen__content"
+    >
+      <div>
+        children
+      </div>
+    </div>
+    <div
+      data-testid="mock-footer"
+    >
+      Footer
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="footer center"
+    data-testid="Footer"
+  >
+    © 2024
+  </div>
+</DocumentFragment>
+`;

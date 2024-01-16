@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="header"
+  >
+    <div
+      class="header__logo"
+    >
+      <img
+        class="icon rotate header__logoIcon"
+        src=""
+      />
+    </div>
+    <h1>
+      GitHub Finder
+    </h1>
+  </div>
+</DocumentFragment>
+`;

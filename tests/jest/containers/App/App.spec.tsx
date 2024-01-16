@@ -8,7 +8,6 @@ jest.mock('../../../../src/containers/HomePage', () => () => <div>HomePage Mock<
 jest.mock('../../../../src/components/NoMatch', () => () => <div>NoMatch Mock</div>);
 
 describe('App Component', () => {
-    // Rendering Test for HomePage
     it('renders HomePage at root route', () => {
         render(
             <MemoryRouter initialEntries={['/']}>
@@ -18,7 +17,7 @@ describe('App Component', () => {
         expect(screen.getByText('HomePage Mock')).toBeInTheDocument();
     });
 
-    // Rendering Test for NoMatch
+
     it('renders NoMatch at an undefined route', () => {
         render(
             <MemoryRouter initialEntries={['/random']}>
@@ -28,7 +27,6 @@ describe('App Component', () => {
         expect(screen.getByText('NoMatch Mock')).toBeInTheDocument();
     });
 
-    // Snapshot Test
     it('matches snapshot', () => {
         const { asFragment } = render(
             <MemoryRouter>

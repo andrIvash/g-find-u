@@ -1,4 +1,4 @@
-export interface IGithubUsersResponce {
+export interface IGithubUsersResponse {
     data: {[key: string]: any}
 }
 

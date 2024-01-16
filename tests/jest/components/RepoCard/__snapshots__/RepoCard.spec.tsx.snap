@@ -3,7 +3,7 @@
 exports[`RepoCard Component matches snapshot 1`] = `
 <DocumentFragment>
   <section
-    class="repoCard"
+    class="repoCard "
   >
     <header
       class="repoCard__header"
@@ -14,14 +14,18 @@ exports[`RepoCard Component matches snapshot 1`] = `
         <h3
           class="repoCard__title"
         >
-          <a
-            class="repoCard__link"
-            href="https://github.com/test/repo"
-            rel="noreferrer"
-            target="_blank"
+          <p
+            class="MuiTypography-root MuiTypography-body1 repoCard__linkWrapper css-ahj2mt-MuiTypography-root"
           >
-            Test Repo
-          </a>
+            <a
+              class="repoCard__link"
+              href="https://github.com/test/repo"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Test Repo
+            </a>
+          </p>
         </h3>
       </div>
       <div
@@ -29,7 +33,7 @@ exports[`RepoCard Component matches snapshot 1`] = `
       >
         <a
           class="visually-hidden"
-          href="https://api.github.com/repos/andrIvas/excercises/stargazers"
+          href="#"
         >
           <span
             class="repoCard__stars"

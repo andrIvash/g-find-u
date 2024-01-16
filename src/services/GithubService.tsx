@@ -1,7 +1,7 @@
 import { BASE_URL } from '../resources/constants';
 import axios, { AxiosInstance } from 'axios';
-import { IGithubUsersResponce } from '../store/users/types';
-import { IGithubReposResponce } from '../store/repos/types';
+import { IGithubUsersResponse } from '../store/users/types';
+import { IGithubReposResponse } from '../store/repos/types';
 
 export default class GithubService {
     private token: string;
@@ -31,7 +31,7 @@ export default class GithubService {
         }
     }
 
-    public async fetchUsers(search: string, params?: [{ [key: string]: string }]): Promise<IGithubUsersResponce> {
+    public async fetchUsers(search: string, params?: [{ [key: string]: string }]): Promise<IGithubUsersResponse> {
         return this.github.get('/search/users', {
             params: {
                 ...this.defaultParams,
@@ -41,7 +41,7 @@ export default class GithubService {
         })
     }
 
-    public async fetchRepos(login: string, params?: { [key: string]: string }): Promise<IGithubReposResponce> {
+    public async fetchRepos(login: string, params?: { [key: string]: string }): Promise<IGithubReposResponse> {
         return this.github.get(`/users/${login}/repos`, {
             params: {
                 ...this.defaultParams,

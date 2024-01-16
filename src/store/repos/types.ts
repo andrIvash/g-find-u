@@ -1,5 +1,5 @@
 
-export interface IGithubReposResponce {
+export interface IGithubReposResponse {
     data: { [key: string]: any },
     headers: any
 }

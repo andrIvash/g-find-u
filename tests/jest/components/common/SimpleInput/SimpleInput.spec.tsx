@@ -5,6 +5,8 @@ import SimpleInput from '../../../../../src/components/common/SimpleInput';
 
 describe('SimpleInput Component', () => {
     const mockOnChange = jest.fn();
+    const mockOnKeyDown = jest.fn();
+
     it('renders without crashing', () => {
         render(<SimpleInput onChange={mockOnChange} value='' />);
         expect(screen.getByTestId('SimpleInput')).toBeInTheDocument();
@@ -25,6 +27,14 @@ describe('SimpleInput Component', () => {
         render(<SimpleInput onChange={mockOnChange} value='' />);
         fireEvent.change(screen.getByRole('textbox'), { target: { value: 'New Value' } });
         expect(mockOnChange).toHaveBeenCalledTimes(1);
+    });
+
+    it('calls onKeyDown callback when a key is pressed', () => {
+        render(<SimpleInput onChange={mockOnChange} onKeyDown={mockOnKeyDown} value='' />);
+        fireEvent.change(screen.getByRole('textbox'), { target: { value: 'New Value' } });
+        const inputElement = screen.getByTestId('SimpleInputField');
+        fireEvent.keyDown(inputElement, { keyCode: 13 });
+        expect(mockOnKeyDown).toHaveBeenCalledWith(13);
     });
 
     it('matches snapshot', () => {

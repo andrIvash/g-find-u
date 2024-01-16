@@ -10,6 +10,13 @@ export const SimpleInput = (props: Props) => {
         props.onChange(event.target.value)
     };
 
+    const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+        const keyCode = event.keyCode;
+        if (props.onKeyDown) {
+            props.onKeyDown(keyCode)
+        }
+      };
+
     return (
         <div
             className={`simpleInput input ${props.className ? props.className : ""}`}
@@ -17,10 +24,12 @@ export const SimpleInput = (props: Props) => {
         >
             <TextField
                 className="textField"
+                data-testid='SimpleInputField'
                 id="outlined-controlled"
                 label={props.label ? props.label : defaultLabel}
                 value={props.value}
                 onChange={handleChange}
+                onKeyDown={handleKeyDown}
             />
         </div>
     )

@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Thunk } from '../types';
-import { IUser, ISlice, IGithubUsersResponce } from './types';
+import { IUser, ISlice, IGithubUsersResponse } from './types';
 import GithubService from '../../services/GithubService';
 
 export const initialState: ISlice = {
@@ -32,7 +32,7 @@ export const { reducer } = slice;
 
 export const { request, success, failure } = slice.actions;
 
-export const filterUsersData = (data: IGithubUsersResponce['data']) => {
+export const filterUsersData = (data: IGithubUsersResponse['data']) => {
     if (!data.items || !data.items.length) return [];
     return data.items.map((item: any) => (
         {

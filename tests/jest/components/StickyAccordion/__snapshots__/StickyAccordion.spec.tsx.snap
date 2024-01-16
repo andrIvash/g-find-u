@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StickyAccordion Component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="s-acco s-acco--no-expanded"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-outlined MuiAccordion-root MuiAccordion-gutters s-acco__item  css-1b9v8ew-MuiPaper-root-MuiAccordion-root"
+    >
+      <div
+        aria-controls="User1-content"
+        aria-expanded="false"
+        class="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters s-acco__sum css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root"
+        id="User1-header"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-o4b71y-MuiAccordionSummary-content"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body1 s-acco__header css-ahj2mt-MuiTypography-root"
+          >
+            User1
+          </p>
+        </div>
+        <div
+          class="MuiAccordionSummary-expandIconWrapper css-yw020d-MuiAccordionSummary-expandIconWrapper"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="ExpandMoreIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-bz4dnt-MuiCollapse-root"
+        style="min-height: 0px;"
+      >
+        <div
+          class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+        >
+          <div
+            class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
+          >
+            <div
+              aria-labelledby="User1-header"
+              class="MuiAccordion-region"
+              id="User1-content"
+              role="region"
+            >
+              <div
+                class="MuiAccordionDetails-root s-acco__details css-15v22id-MuiAccordionDetails-root"
+                id="scrollableDiv-User1"
+                style="height: 100%;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiPaper-root MuiPaper-outlined MuiAccordion-root MuiAccordion-gutters s-acco__item  css-1b9v8ew-MuiPaper-root-MuiAccordion-root"
+    >
+      <div
+        aria-controls="User2-content"
+        aria-expanded="false"
+        class="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters s-acco__sum css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root"
+        id="User2-header"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-o4b71y-MuiAccordionSummary-content"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body1 s-acco__header css-ahj2mt-MuiTypography-root"
+          >
+            User2
+          </p>
+        </div>
+        <div
+          class="MuiAccordionSummary-expandIconWrapper css-yw020d-MuiAccordionSummary-expandIconWrapper"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="ExpandMoreIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-bz4dnt-MuiCollapse-root"
+        style="min-height: 0px;"
+      >
+        <div
+          class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+        >
+          <div
+            class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
+          >
+            <div
+              aria-labelledby="User2-header"
+              class="MuiAccordion-region"
+              id="User2-content"
+              role="region"
+            >
+              <div
+                class="MuiAccordionDetails-root s-acco__details css-15v22id-MuiAccordionDetails-root"
+                id="scrollableDiv-User2"
+                style="height: 100%;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
