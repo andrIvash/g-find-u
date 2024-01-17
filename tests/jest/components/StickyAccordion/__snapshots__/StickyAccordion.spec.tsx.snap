@@ -7,6 +7,7 @@ exports[`StickyAccordion Component matches snapshot 1`] = `
   >
     <div
       class="MuiPaper-root MuiPaper-outlined MuiAccordion-root MuiAccordion-gutters s-acco__item  css-1b9v8ew-MuiPaper-root-MuiAccordion-root"
+      data-testid="accordion-item"
     >
       <div
         aria-controls="User1-content"
@@ -21,6 +22,7 @@ exports[`StickyAccordion Component matches snapshot 1`] = `
         >
           <p
             class="MuiTypography-root MuiTypography-body1 s-acco__header css-ahj2mt-MuiTypography-root"
+            data-testid="accordion-itemheader"
           >
             User1
           </p>
@@ -69,6 +71,7 @@ exports[`StickyAccordion Component matches snapshot 1`] = `
     </div>
     <div
       class="MuiPaper-root MuiPaper-outlined MuiAccordion-root MuiAccordion-gutters s-acco__item  css-1b9v8ew-MuiPaper-root-MuiAccordion-root"
+      data-testid="accordion-item"
     >
       <div
         aria-controls="User2-content"
@@ -83,6 +86,7 @@ exports[`StickyAccordion Component matches snapshot 1`] = `
         >
           <p
             class="MuiTypography-root MuiTypography-body1 s-acco__header css-ahj2mt-MuiTypography-root"
+            data-testid="accordion-itemheader"
           >
             User2
           </p>

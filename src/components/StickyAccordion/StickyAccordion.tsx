@@ -52,6 +52,7 @@ export const StickyAccordion = (props: IProps) => {
                     expanded={expanded === item.login}
                     onChange={handleChange(item.login)}
                     variant='outlined'
+                    data-testid='accordion-item'
                 >
                     <AccordionSummary
                         className='s-acco__sum'
@@ -59,7 +60,10 @@ export const StickyAccordion = (props: IProps) => {
                         aria-controls={`${item.login}-content`}
                         id={`${item.login}-header`}
                     >
-                        <Typography className='s-acco__header'>
+                        <Typography
+                            className='s-acco__header'
+                            data-testid='accordion-itemheader'
+                        >
                             {item.login}
                         </Typography>
                     </AccordionSummary>

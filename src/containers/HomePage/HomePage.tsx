@@ -107,7 +107,7 @@ export const HomePage = () => {
                         label='Search'
                     />
                 </div>
-                <div className='homePage__content'>
+                <div className='homePage__content' data-testid='homepage-content'>
                     <p>Showing users for <span className='homePage__searchName'>{searchLabel}</span></p>
                     {isUsersFetching ? LOADER_MESSAGE : undefined}
                     {isUsersError ? ERROR_LOADED_MESSAGE : undefined}
