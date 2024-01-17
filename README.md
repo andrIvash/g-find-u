@@ -4,7 +4,7 @@
 Github repositories explorer
 
 ## DEMO
-[google](https://google.com)
+[https://g-find-u.vercel.app/](https://g-find-u.vercel.app/)
 
 ## Screenshot
 <img src="assets/images/screen-app1.png" width="150" height="auto"/>
