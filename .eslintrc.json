@@ -24,6 +24,7 @@
     }
   },
   "rules": {
+    "import/named": 0,
     "react/prop-types": "off",
     "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/no-explicit-any": "off",
