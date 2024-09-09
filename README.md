@@ -1,33 +1,38 @@
 <img src="assets/images/logo.png" width="50" height="50"/>
 
 # G-FIND-U
+
 Github repositories explorer
 
 ## DEMO
+
 [https://g-find-u.vercel.app/](https://g-find-u.vercel.app/)
 
 ## Screenshot
+
 <img src="assets/images/screen-app1.png" width="150" height="auto"/>
 
 ## Core Features
-- React
-- TypeScript
-- Redux (Redux toolkit)
-- SASS/SCSS Loader
-- CSS Loader
-- Image Loader
-- Font Loader
-- ESLint
-- Jest (React Testing Library)
-- Cypress
-- Webpack & Configuration
-- React Fast Refresh + Webpack HMR
-- Dark Mode + Light Mode (Theme)
-<br />
+
+-   React
+-   TypeScript
+-   Redux (Redux toolkit)
+-   SASS/SCSS Loader
+-   CSS Loader
+-   Image Loader
+-   Font Loader
+-   ESLint
+-   Jest (React Testing Library)
+-   Cypress
+-   Webpack & Configuration
+-   React Fast Refresh + Webpack HMR
+-   Dark Mode + Light Mode (Theme)
+    <br />
 
 ## Installation
 
 #### To install this project you need to run following commands
+
 <br>
 Clone the repository :
 
@@ -46,6 +51,7 @@ npm install
 # or using yarn
 yarn install
 ```
+
 <br />
 
 ## Start : Development
@@ -55,6 +61,7 @@ To develop and run your web application, you need to run following command :
 ```bash
 npm start
 ```
+
 <br />
 
 ## Lint : Development
@@ -64,6 +71,7 @@ To lint application source code using ESLint via this command :
 ```bash
 npm lint
 ```
+
 <br />
 
 ## JEST : Development
@@ -78,6 +86,7 @@ npm run test:jest:watch
 #coverage
 npm test:jest:coverage
 ```
+
 <br />
 
 ## E2E : Development
@@ -122,3 +131,5 @@ tools/webpack/webpack.config.dev.js
 # Production webpack config
 tools/webpack/webpack.config.prod.js
 ```
+
+#
